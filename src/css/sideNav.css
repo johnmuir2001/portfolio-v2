@@ -1,0 +1,68 @@
+.navWrap{
+    position: fixed;
+    width: 150px;
+    right: 2%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    z-index: 999;
+}
+ul{
+    list-style: none;
+}
+li{
+    margin: 20px 0px 20px 0px;
+    text-align: end;
+}
+span{
+    display: inline-block;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    text-align: end;
+    color: white;
+}
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+a:active{
+    text-decoration: none;
+}
+.label{
+    position: relative;
+    left: 10px;
+    opacity: 0;
+    transition: all 0.3s;
+
+}
+a:hover .label{
+    opacity: 1;
+    left: 0px;
+}
+.dot{
+    position: relative;
+    top: -1px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin: 0px 0px 0px 10px;
+    background-color: white;
+}
+.bigDot{
+    position: relative;
+    top: 3px;
+    left: 3px;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 0px 0px 0px 10px;
+    background-color: white;
+    transition: all 0.1s;
+}
+

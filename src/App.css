@@ -1,38 +1,112 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.cursor{
+  transform: translate(-50%, -50%);
+  position: absolute;
+  mix-blend-mode: difference;
+  z-index: 20;
+  transition: all 0.1s;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  background: radial-gradient(circle, #000 0%, #000 5.99%, #fff 6%,  #fff 100%);
+}
+.cursor:active{
+  height: 40px;
+  width: 40px;
+  background: radial-gradient(circle, #000 0%, #000 10.99%, #fff 11%,  #fff 100%);
+}
+
+#homePage{
+  position: relative;
+  height: 115vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.mainTitle{
+  position: absolute;
+  z-index: -5;
   text-align: center;
+  width: 100%;
+  top: 18%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.iAm{
+  margin: 0;
   color: white;
+  font-size: 8vh;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  position: relative;
+}
+.name{
+  margin: 0;
+  color: white;
+  font-size: 17vh;
+  font-family: 'Permanent Marker', sans-serif;
+  text-transform: uppercase;
+}
+.sky{
+  position: absolute;
+  height: 100%;
+  width: auto;
+  z-index: -10;
+}
+.ground{
+  position: absolute;
+  overflow: hidden;
+  width: 2000px;
+  height: auto;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0%)
+}
+@media only screen and (min-width: 2000px) {
+  .ground{
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    left: 0;
+    bottom: 0;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+
+#aboutPage{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(2, 111, 253);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+#projectsPage{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(2, 173, 253);
+}
+
+
+#contactPage{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(2, 236, 253);
 }
